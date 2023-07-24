@@ -2,22 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Environment Hostnames</h1>
-    <p>Use one per line</p>
+    <div class="form">
+      <h1 class="form__title">Environment Hostnames</h1>
+      <div class="form__fields">
+        <p class="form__warning">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          Always use <strong>one</strong> hostname per line!
+        </p>
 
-    <h2>Development</h2>
-    <textarea id="devHostnames"></textarea>
-
-    <h2>QA</h2>
-    <textarea id="qaHostnames"></textarea>
-
-    <h2>Production</h2>
-    <textarea id="prodHostnames"></textarea>
-
-    <button id="save">Save</button>
-
-    <script src="options.js"></script>
+        <div class="field">
+          <label for="devHostnames" class="field__label">Development</label>
+          <textarea id="devHostnames" class="field__textarea"></textarea>
+        </div>
+        <div class="field">
+          <label for="qaHostnames" class="field__label">QA</label>
+          <textarea id="qaHostnames" class="field__textarea"></textarea>
+        </div>
+        <div class="field">
+          <label for="prodHostnames" class="field__label">Production</label>
+          <textarea id="prodHostnames" class="field__textarea"></textarea>
+        </div>
+        <button id="save" class="form__button">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            <polyline points="7 3 7 8 15 8"></polyline>
+          </svg> Save
+        </button>
+      </div>
+      <script src="options.js"></script>
+    </div>
   </body>
 </html>
